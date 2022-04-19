@@ -1,0 +1,79 @@
+<div style="display: flex">
+  <div class="atribute">
+    <h3>Квест: "{{data.quest.name}}"</h3>
+    <h3>Условие:</h3>
+    <h4>Уровень: {{questConditionsAndReward.condition.minLevel}}</h4>
+    <div>
+      <img src="../../../assets/attributes/power.jpg ">
+      <span>Сила: {{questConditionsAndReward.condAttributes.power}}</span>
+    </div>
+    <div>
+      <img src="../../../assets/attributes/intellect.jpg ">
+      <span>Интеллект: {{questConditionsAndReward.condAttributes.intellect}}</span>
+    </div>
+    <div>
+      <img src="../../../assets/attributes/willpower.jpg ">
+      <span>Сила воли: {{questConditionsAndReward.condAttributes.willpower}}</span>
+    </div>
+    <div>
+      <img src="../../../assets/attributes/dexterity.jpg ">
+      <span>Ловкость: {{questConditionsAndReward.condAttributes.dexterity}}</span>
+    </div>
+    <div>
+      <img src="../../../assets/attributes/speed.jpg ">
+      <span>Скорость: {{questConditionsAndReward.condAttributes.speed}}</span>
+    </div>
+    <div>
+      <img src="../../../assets/attributes/endurance.jpg ">
+      <span>Выносливость: {{questConditionsAndReward.condAttributes.endurance}}</span>
+    </div>
+    <div>
+      <img src="../../../assets/attributes/charm.jpg ">
+      <span>Обаяине: {{questConditionsAndReward.condAttributes.charm}}</span>
+    </div>
+    <div>
+      <img src="../../../assets/attributes/luck.jpg ">
+      <span>Удача: {{questConditionsAndReward.condAttributes.luck}}</span>
+    </div>
+
+    <h3>Награда:</h3>
+
+    <div *ngIf="questConditionsAndReward.rewAttributes.power != 0">
+      <img src="../../../assets/attributes/power.jpg ">
+      <span>Сила: {{questConditionsAndReward.rewAttributes.power}}</span>
+    </div>
+    <div *ngIf="questConditionsAndReward.rewAttributes.intellect != 0">
+      <img src="../../../assets/attributes/intellect.jpg ">
+      <span>Интеллект: {{questConditionsAndReward.rewAttributes.intellect}}</span>
+    </div>
+    <div *ngIf="questConditionsAndReward.rewAttributes.willpower != 0">
+      <img src="../../../assets/attributes/willpower.jpg ">
+      <span>Сила воли: {{questConditionsAndReward.rewAttributes.willpower}}</span>
+    </div>
+    <div *ngIf="questConditionsAndReward.rewAttributes.dexterity != 0">
+      <img src="../../../assets/attributes/dexterity.jpg ">
+      <span>Ловкость: {{questConditionsAndReward.rewAttributes.dexterity}}</span>
+    </div>
+    <div *ngIf="questConditionsAndReward.rewAttributes.speed != 0">
+      <img src="../../../assets/attributes/speed.jpg ">
+      <span>Скорость: {{questConditionsAndReward.rewAttributes.speed}}</span>
+    </div>
+    <div *ngIf="questConditionsAndReward.rewAttributes.endurance != 0">
+      <img src="../../../assets/attributes/endurance.jpg ">
+      <span>Выносливость: {{questConditionsAndReward.rewAttributes.endurance}}</span>
+    </div>
+    <div *ngIf="questConditionsAndReward.rewAttributes.charm != 0">
+      <img src="../../../assets/attributes/charm.jpg ">
+      <span>Обаяине: {{questConditionsAndReward.rewAttributes.charm}}</span>
+    </div>
+    <div *ngIf="questConditionsAndReward.rewAttributes.luck != 0">
+      <img src="../../../assets/attributes/luck.jpg ">
+      <span>Удача: {{questConditionsAndReward.rewAttributes.luck}}</span>
+    </div>
+
+    <h4>Описание: {{questConditionsAndReward.reward.description}}</h4>
+
+    <button *ngIf="data.quest.status != 'начат' && role != 'ROLE_ADMIN'" class="form-button" (click)="takeQuest()">Взять квест</button>
+    <h5>{{result}}</h5>
+  </div>
+</div>

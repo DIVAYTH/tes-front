@@ -1,0 +1,17 @@
+<h3 class="form-title">Рассмотрение заявления персонажа {{data.request.heroName}} </h3>
+<h4 class="form-title">Тип: {{data.request.type}}</h4>
+<div class="form-group">
+  <div class="form-group">
+    <label>Вердикт: </label>
+    <select name="decision" [(ngModel)]="decision" required>
+      <option value="одобрить">одобрить</option>
+      <option value="отклонить">отклонить</option>
+    </select>
+  </div>
+  <div *ngIf="data.request.type != 'завершение_квеста'" class="form-group">
+    <input placeholder=" " name="rang" [(ngModel)]="rang" required minlength="6" maxlength="20" class="form-input">
+    <label class="form-label">Ранг</label>
+  </div>
+  <button (click)="sendResult()" class="form-button" >Отправить</button>
+</div>
+

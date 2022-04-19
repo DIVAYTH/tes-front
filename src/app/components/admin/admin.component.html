@@ -1,0 +1,65 @@
+<div class="admin">
+  <div style="text-align: center">
+    <h2>Профиль админа:</h2>
+    <h3>Состав и заявки:</h3>
+  </div>
+  <div style="display: flex; height: 200px; justify-content: center; margin: 0 1% 0 1%">
+    <div class="tableRang">
+      <table>
+        <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Ранг</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let member of arrRangs" (click)="openModalRang(member)">
+          <td>{{member.id.heroName}}</td>
+          <td>{{member.rang}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tableRequest">
+      <table>
+        <thead>
+        <tr>
+          <th>Тип заявки</th>
+          <th>Герой</th>
+          <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let request of arrRequest" (click)="openRequestDecision(request)">
+          <td>{{request.type}}</td>
+          <td>{{request.heroName}}</td>
+          <td>{{request.description}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div style="text-align: center">
+    <h2>Квесты гильдии:</h2>
+  </div>
+  <table>
+    <thead>
+    <button (click)="openQuestModalNew()" style="margin-bottom: 3%;" class="form-button">Добавить квест</button>
+    <tr>
+      <th>Название</th>
+      <th>Гильдия</th>
+      <th>Описание</th>
+      <th>Статус</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr (click)="openQuestModal(quest)" *ngFor="let quest of arrQuests">
+      <td>{{quest.name}}</td>
+      <td>{{quest.guildName}}</td>
+      <td>{{quest.description}}</td>
+      <td *ngIf="quest.status != null">{{quest.status}}</td>
+      <td *ngIf="quest.status == null">не начат</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

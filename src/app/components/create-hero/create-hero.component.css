@@ -1,0 +1,109 @@
+#form-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+form {
+  overflow: scroll;
+  width: 30%;
+  padding: 1%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ebd5b3;
+  background: url("../../../assets/background/pergament2.jpg");
+}
+
+form::-webkit-scrollbar {
+  width: 0px;
+}
+
+.form-title {
+  color: saddlebrown;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.form-group img {
+  width: 30%;
+  border: 2px solid saddlebrown;
+  margin-right: 5%;
+}
+
+.form-group img:hover {
+  filter: brightness(110%);
+}
+
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+label {
+  color: saddlebrown;
+}
+
+span {
+  color: saddlebrown;
+}
+
+.form-input {
+  color: saddlebrown;
+  width: 40%;
+  padding: 0 0 1% 0;
+  font-style: italic;
+  border: none;
+  border-bottom: 1px solid #ebd5b3;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+select {
+  font-style: italic;
+  color: saddlebrown;
+  background: transparent;
+  border-radius: 10px;
+  border:1px solid #cd863f;
+}
+
+select:hover,
+select:focus {
+  border: 1px solid saddlebrown;
+}
+
+select option {
+  background: #ebd5b3;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  visibility: hidden;
+  position: absolute;
+}
+
+input[type=radio] + label:before,
+input[type=checkbox] + label:before {
+  height: 8px;
+  width: 8px;
+  margin-right: 2px;
+  border-radius: 10px;
+  content: " ";
+  display: inline-block;
+  vertical-align: baseline;
+  border: 1px solid #cd863f;
+}
+
+input[type=radio]:checked + label:before,
+input[type=checkbox]:checked + label:before {
+  background: saddlebrown;
+}
+
+.form-input:focus{
+  border-bottom: 1px solid saddlebrown;
+}

@@ -1,0 +1,69 @@
+<div style="display: flex; height: 90vh">
+  <div id="hero" class="block">
+    <div>
+      <div class="portret">
+        <div>
+          <img [src]="getImg()">
+        </div>
+        <div style="margin-left: 10%">
+          <div style="margin-top:5%">
+            <h4>Имя: {{userHero.hero.name}}</h4>
+            <h4>Пол: {{userHero.hero.gender}}</h4>
+            <h4>Уровень: {{userHero.hero.level}}</h4>
+            <h4>Раса: {{userHero.hero.race}}</h4>
+            <h4>Класс: {{userHero.hero.heroClass}} </h4>
+            <h4>Созвездие: {{userHero.hero.galaxy}}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="atribute">
+        <div>
+          <img src="../../../assets/attributes/power.jpg ">
+          <span>Сила: {{userHero.attributes.power}}</span>
+        </div>
+        <div>
+          <img src="../../../assets/attributes/intellect.jpg ">
+          <span>Интеллект: {{userHero.attributes.intellect}}</span>
+        </div>
+        <div>
+          <img src="../../../assets/attributes/willpower.jpg ">
+          <span>Сила воли: {{userHero.attributes.willpower}}</span>
+        </div>
+        <div>
+          <img src="../../../assets/attributes/dexterity.jpg ">
+          <span>Ловкость: {{userHero.attributes.dexterity}}</span>
+        </div>
+        <div>
+          <img src="../../../assets/attributes/speed.jpg ">
+          <span>Скорость: {{userHero.attributes.speed}}</span>
+        </div>
+        <div>
+          <img src="../../../assets/attributes/endurance.jpg ">
+          <span>Выносливость: {{userHero.attributes.endurance}}</span>
+        </div>
+        <div>
+          <img src="../../../assets/attributes/charm.jpg ">
+          <span>Обаяине: {{userHero.attributes.charm}}</span>
+        </div>
+        <div>
+          <img src="../../../assets/attributes/luck.jpg ">
+          <span>Удача: {{userHero.attributes.luck}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main" >
+    <router-outlet></router-outlet>
+  </div>
+  <div class="tools">
+    <div>
+      <button (click)="logout()" class="exitButton" >Выход</button>
+      <img *ngIf="role == 'ROLE_USER'" (click)="navigateUser()" src="../../../assets/guild/hero.gif">
+      <img *ngIf="role == 'ROLE_ADMIN'" (click)="navigateAdmin()" src="../../../assets/guild/hero.gif">
+      <img (click)="enterGuild('Гильдия Магов')" src="../../../assets/guild/mage.jpg">
+      <img (click)="enterGuild('Гильдия Бойцов')" src="../../../assets/guild/boyci.gif">
+      <img (click)="enterGuild('Темное Братство')" src="../../../assets/guild/assasin.jpg">
+      <img (click)="enterGuild('Гильдия Воров')" src="../../../assets/guild/theifs.jpg">
+    </div>
+  </div>
+</div>

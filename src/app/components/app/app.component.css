@@ -1,0 +1,17 @@
+.header {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  background: url("../../../assets/background/pergament.jpg");
+  height: 5%;
+}
+
+.main {
+  background: url("../../../assets/background/pergament4.jpg");
+  height: 90%;
+}
+
+.footer {
+  background: url("../../../assets/background/pergament.jpg");
+  height: 5%;
+}

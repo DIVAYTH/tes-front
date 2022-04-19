@@ -1,0 +1,99 @@
+<div id="form-container">
+  <form #form="ngForm" novalidate="">
+    <h2 class="form-title">Добавление нового квеста</h2>
+    <div class="form-group" style="text-align: center">
+      <h5>Квест</h5>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="name" name="name" required minlength="6" maxlength="30" class="form-input">
+      <label class="form-label">Название</label>
+    </div>
+    <div class="form-group">
+      <h5>Описание</h5>
+      <textarea placeholder=" " [(ngModel)]="descriptionQuest" name="description" required minlength="6"></textarea>
+    </div>
+    <div class="form-group" style="text-align: center">
+      <h5>Условия взятия</h5>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="minLevel" name="minLevel" required
+             class="form-input">
+      <label class="form-label">Уровень</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionPower" name="cPower" required  class="form-input">
+      <label class="form-label">Сила</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionIntellect"  name="cIntellect" required  class="form-input">
+      <label class="form-label">Интеллект</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionWillpower"  name="cWillpower" required class="form-input">
+      <label class="form-label">Сила воли</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionDexterity" name="cDexterity" required class="form-input">
+      <label class="form-label">Ловкость</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionSpeed" name="cSpeed" required  class="form-input">
+      <label class="form-label">Скорость</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionEndurance" name="cEndurance" required  class="form-input">
+      <label class="form-label">Выносливость</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionCharm" name="cCharm" required class="form-input">
+      <label class="form-label">Обаяние</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="conditionLuck" name="cLuck" required class="form-input">
+      <label class="form-label">Удача</label>
+    </div>
+    <div class="form-group" style="text-align: center">
+      <h5>Награда</h5>
+    </div>
+    <div class="form-group">
+      <h5>Описание</h5>
+      <textarea placeholder=" " [(ngModel)]="rewardDescription" name="rewardDescription" required></textarea>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardPower" name="rPower"  class="form-input">
+      <label class="form-label">Сила</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardIntellect" name="rIntellect" class="form-input">
+      <label class="form-label">Интеллект</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardWillpower" name="rWillpower"  class="form-input">
+      <label class="form-label">Сила воли</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardDexterity" name="rDexterity"  class="form-input">
+      <label class="form-label">Ловкость</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardSpeed" name="rSpeed"  class="form-input">
+      <label class="form-label">Скорость</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardEndurance" name="rEndurance"  class="form-input">
+      <label class="form-label">Выносливость</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardCharm" name="rCharm"  class="form-input">
+      <label class="form-label">Обаяние</label>
+    </div>
+    <div class="form-group">
+      <input placeholder=" " [(ngModel)]="rewardLuck" name="rLuck"  class="form-input">
+      <label class="form-label">Удача</label>
+    </div>
+    <button type="submit" (click)="newQuest()" class="form-button">Добавить квест</button>
+    <div style="margin-top: 5%">
+      <span *ngIf="result == true" style="color: saddlebrown">Данные введены неверно</span>
+    </div>
+  </form>
+</div>

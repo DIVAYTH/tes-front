@@ -1,0 +1,48 @@
+#form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}
+
+.form{
+  width: 20%;
+  padding: 1%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px #ebd5b3;
+  background: url("../../../assets/background/pergament2.jpg");
+}
+
+.form-title{
+  color: saddlebrown;
+  text-align: center;
+}
+
+.form-group{
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.form-label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: saddlebrown;
+  transition: 0.3s;
+}
+
+.form-input{
+  color: saddlebrown;
+  width: 100%;
+  padding: 0 0 1% 0;
+  font-style: italic;
+  border: none;
+  border-bottom: 1px solid #ebd5b3;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-input:focus{
+  border-bottom: 1px solid saddlebrown;
+}

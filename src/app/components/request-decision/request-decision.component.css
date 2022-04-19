@@ -1,0 +1,49 @@
+.form-group {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+select {
+  font-style: italic;
+  color: saddlebrown;
+  background: transparent;
+  border-radius: 10px;
+  border:1px solid #cd863f;
+}
+
+select:hover,
+select:focus {
+  border: 1px solid saddlebrown;
+}
+
+select option {
+  background: #ebd5b3;
+}
+
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+label {
+  color: saddlebrown;
+}
+.form-title {
+  color: saddlebrown;
+  text-align: center;
+}
+
+.form-input{
+  color: saddlebrown;
+  width:100%;
+  padding: 0 0 1% 0;
+  font-style: italic;
+  border: none;
+  border-bottom: 1px solid #ebd5b3;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+

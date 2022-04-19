@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-style: italic;
+}
+
+table {
+  color: saddlebrown;
+  margin:  0 1% 0 1%;
+  width: 98%;
+  text-align: center;
+  border-spacing: 0px;
+}
+
+table thead tr {
+  color: white;
+  font-weight: bold;
+  background: url("assets/background/pergament.jpg");
+}
+
+table tr td {
+  border-right: 1px solid #dfdfdf;
+}
+
+table tr td:last-child {
+  border-right: 0px;
+}
+
+
+table tbody tr:nth-child(n) {
+  background: url("assets/background/pergament2.jpg");
+}
+
+table tbody tr:hover {
+  background: #ebd5b3;
+  transition-duration: 0.6s;
+}
+
+.form-button{
+  font-style: italic;
+  padding: 2% 5%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background:saddlebrown ;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 5%;
+}
+
+.form-button:hover{
+  background:#cd863f;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label{
+  color: #cd863f;
+  font-size: 12px;
+  top:-10px;
+}
+.cdk-global-scrollblock {
+  position: initial;
+}
+
+.custom-dialog-container .mat-dialog-container{
+  overflow: scroll;
+  background: url("assets/background/pergament2.jpg");
+}
+
+.custom-dialog-container .mat-dialog-container::-webkit-scrollbar{
+  width: 0px;
+}
+
+
+
+

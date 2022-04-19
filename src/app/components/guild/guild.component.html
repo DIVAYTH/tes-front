@@ -1,0 +1,43 @@
+<div class="guild">
+  <h1>{{guild}}</h1>
+  <h2>Описание:</h2>
+  <div style="display: flex; height: 200px; justify-content: center; margin: 0 1% 0 1%">
+    <div class="table">
+      <table style="margin: 0 ">
+        <thead>
+        <tr>
+          <th>Герой</th>
+          <th>Ранг</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let rang of rangArr">
+          <td>{{rang.id.heroName}}</td>
+          <td>{{rang.rang}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="description">
+      <span>{{description}}</span>
+    </div>
+  </div>
+  <h3>Квесты:</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Название</th>
+      <th>Описание</th>
+      <th>Герой</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr (click)="openQuestModal(quest)" *ngFor="let quest of questsArr" style="cursor: pointer">
+      <td>{{quest.name}}</td>
+      <td>{{quest.description}}</td>
+      <td *ngIf="quest.heroName != null">{{quest.heroName}}</td>
+      <td *ngIf="quest.heroName == null">-</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

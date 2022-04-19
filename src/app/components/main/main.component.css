@@ -1,0 +1,72 @@
+#hero {
+  width: 30%;
+}
+
+.portret {
+  display: flex;
+}
+
+.portret img {
+  background: url("../../../../../tes/src/assets/background/pergament2.jpg");
+  max-height: 300px;
+  border: 2px solid black;
+}
+
+.atribute div {
+  display: flex;
+  align-items: center;
+}
+
+.atribute div span {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 3%;
+}
+
+
+.atribute img {
+  width: 8%;
+  height: 8%;
+}
+
+/*Главная*/
+#main {
+
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+
+/*Инструменты*/
+.tools {
+  border-left: 2px solid white;
+  width: 5%;
+  height: auto;
+}
+
+
+
+.tools img {
+  width: 100%;
+  height: 10%;
+  cursor: pointer;
+}
+
+img:hover {
+  filter: brightness(110%);
+}
+
+.exitButton{
+  width: 100%;
+  height: 40px;
+  font-style: italic;
+  border: none;
+  color: white;
+  background: url("../../../../../tes/src/assets/background/pergament.jpg") ;
+  outline: none;
+  cursor: pointer;
+}
+
+.exitButton:hover{
+  filter: brightness(110%) ;
+}

@@ -1,0 +1,87 @@
+<div id="form-container">
+  <form #form="ngForm" (ngSubmit)="sendHero(form)" novalidate="" >
+    <h2 class="form-title">Создание персонажа</h2>
+    <div class="form-group">
+      <input placeholder=" " name="name" [(ngModel)]="name" required minlength="6" maxlength="20" class="form-input">
+      <label class="form-label">Имя</label>
+    </div>
+    <div class="form-group">
+      <span>Пол: </span>
+      <input id="radio-1" [(ngModel)]="gender" type="radio" name="sex" value="{{Sex.MALE}}" checked>
+      <label for="radio-1"> {{Sex.MALE}} </label>
+      <input id="radio-2" [(ngModel)]="gender" type="radio" name="sex" value="{{Sex.FEMALE}}">
+      <label for="radio-2">{{Sex.FEMALE}}</label>
+    </div>
+    <div class="form-group">
+      <span>Раса: </span>
+      <select name="race" [(ngModel)]="race_name" required>
+        <option value="{{Race.ALTMER}}">{{Race.ALTMER}}</option>
+        <option value="{{Race.ARGONIANIN}}">{{Race.ARGONIANIN}}</option>
+        <option value="{{Race.BOSMER}}">{{Race.BOSMER}}</option>
+        <option value="{{Race.BRETON}}">{{Race.BRETON}}</option>
+        <option value="{{Race.DUNMER}}">{{Race.DUNMER}}</option>
+        <option value="{{Race.IMPEREC}}">{{Race.IMPEREC}}</option>
+        <option value="{{Race.KHADJIT}}">{{Race.KHADJIT}}</option>
+        <option value="{{Race.NORD}}">{{Race.NORD}}</option>
+        <option value="{{Race.ORC}}">{{Race.ORC}}</option>
+        <option value="{{Race.REDGUARD}}">{{Race.REDGUARD}}</option>
+      </select>
+    </div>
+    <div class="form-group" style="display: flex" *ngIf="arrRace.length !== 0">
+      <img [src]="getImgRace()">
+      <span> {{arrRace[iRace].description}}</span>
+    </div>
+    <div class="form-group">
+      <span>Класс: </span>
+      <select name="class_name" [(ngModel)]="heroClass" required>
+        <option value="Маг">Маг</option>
+        <option value="Боевой маг">Боевой маг</option>
+        <option value="Чародей">Чародей</option>
+        <option value="Вор">Вор</option>
+        <option value="Ассасин">Ассасин</option>
+        <option value="Пилигрим">Пилигрим</option>
+        <option value="Воин">Воин</option>
+        <option value="Паладин">Паладин</option>
+        <option value="Лучник">Лучник</option>
+      </select>
+    </div>
+    <div class="form-group" style="display: flex" *ngIf="arrClass.length !== 0">
+      <img [src]="getImgClass()">
+      <span>{{arrClass[iClass].description}}</span>
+    </div>
+    <div class="form-group">
+      <span>Созвездие: </span>
+      <select name="galaxy_name" [(ngModel)]="galaxy_name" required>
+        <option value="Воин">Воин</option>
+        <option value="Вор">Вор</option>
+        <option value="Маг">Маг</option>
+        <option value="Атронах">Атронах</option>
+        <option value="Башня">Башня</option>
+        <option value="Жеребец">Жеребец</option>
+        <option value="Змея">Змея</option>
+        <option value="Леди">Леди</option>
+        <option value="Лорд">Лорд</option>
+        <option value="Любовник">Любовник</option>
+        <option value="Подмастерье">Подмастерье</option>
+        <option value="Ритуал">Ритуал</option>
+        <option value="Тень">Тень</option>
+      </select>
+    </div>
+    <div class="form-group" style="display: flex" *ngIf="arrGalaxy.length !== 0">
+      <img [src]="getImgGalaxy()">
+      <span>{{arrGalaxy[iGalaxy].description}}</span>
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder=" " name="password" [(ngModel)]="password" required minlength="6" maxlength="20"
+             class="form-input">
+      <label class="form-label">Пароль</label>
+    </div>
+    <button type="submit" class="form-button">Создать героя</button>
+    <button (click)="return()" type="submit" class="form-button">Войти</button>
+    <div style="margin-top: 5%">
+      <span *ngIf="colorResult == true" style="color: green; margin-left: 1%">{{registrationResult}}</span>
+      <span *ngIf="colorResult == false" style="color: saddlebrown; margin-left: 1%">{{registrationResult}}</span>
+      <small style="color: saddlebrown">{{valid}}</small>
+    </div>
+  </form>
+</div>

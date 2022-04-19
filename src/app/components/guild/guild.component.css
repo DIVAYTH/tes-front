@@ -1,0 +1,37 @@
+.takeQuest {
+  background: url("../../../../../tes/src/assets/background/pergament4.jpg");
+  color: white;
+  cursor: pointer;
+}
+
+.guild {
+  overflow: scroll;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+
+}
+
+.table {
+  width: 25%;
+  overflow: scroll;
+}
+
+.table2 {
+  height: 45%;
+  overflow: scroll;
+}
+
+.description {
+  width: 75%;
+  font-weight: bold;
+}
+
+.takeQuest:hover {
+  filter: brightness(110%);
+}
+
+.table::-webkit-scrollbar,
+.guild::-webkit-scrollbar{
+  width: 0px;
+}
